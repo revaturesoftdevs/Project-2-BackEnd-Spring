@@ -1,0 +1,137 @@
+package dao;
+import java.util.ArrayList;
+import java.util.List;
+
+import exception.SystemException;
+import model.ReimbursementPojo;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import model.EmployeePojo;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+	
+
+	@Override
+	public EmployeePojo login(EmployeePojo employeePojo)throws SystemException{
+		Connection conn = null;
+		try {
+			conn = DBUtil.makeConnection();
+			Statement stmt = conn.createStatement();
+			String query = "select * from employee_details where emp_username='" + employeePojo.getEmpUserName()
+			+ "' and emp_password='" + employeePojo.getEmpPassword()+ "'";
+			ResultSet rs = stmt.executeQuery(query);
+			if(rs.next()) {
+				employeePojo.setEmpId(rs.getInt(1));
+				employeePojo.setMgrId(rs.getInt(2));
+				employeePojo.setEmpFirstName(rs.getString(3));
+				employeePojo.setEmpLastName(rs.getString(4));
+				employeePojo.setEmpUserName(rs.getString(5));
+				employeePojo.setEmpPassword(rs.getString(6));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new SystemException();
+		}
+		
+		return employeePojo;
+	}
+
+	@Override
+	public List<ReimbursementPojo> viewPendingReimbursements(int empId){
+		Connection conn = null;
+		List<ReimbursementPojo> allPending = new ArrayList<>();
+		try {
+			conn = DBUtil.makeConnection();
+			Statement stmt = conn.createStatement();
+			String query = "SELECT * FROM reimbursment_details WHERE emp_id= " + empId + "AND reimbursment_status= 'pending'";
+			ResultSet rs = stmt.executeQuery(query);
+			int counter = 0;
+			while(rs.next()) {
+				counter++;
+				ReimbursementPojo reimbursementPojo = new ReimbursementPojo(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getString(4), rs.getDouble(5), rs.getString(6));
+				allPending.add(reimbursementPojo);
+			}
+			
+			// create empty status 
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return allPending;
+	}
+
+	@Override
+	public List<ReimbursementPojo> viewResolvedReimbursements(int empId){
+		Connection conn = null;
+		List<ReimbursementPojo> allResolved = new ArrayList<>();
+		try {
+			conn = DBUtil.makeConnection();
+			Statement stmt = conn.createStatement();
+			String query = "SELECT * FROM reimbursment_details WHERE (emp_id= " + empId + "AND reimbursment_status= 'denied') OR (reimbursment_status= 'approved')"; // can't use two 'or' s
+			ResultSet rs = stmt.executeQuery(query);
+			int counter = 0;
+			while(rs.next()) {
+				counter++;
+				ReimbursementPojo reimbursementPojo = new ReimbursementPojo(rs.getInt(1), rs.getInt(2), rs.getInt(3), rs.getString(4), rs.getDouble(5), rs.getString(6));
+				allResolved.add(reimbursementPojo);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return allResolved;
+	}
+
+	@Override
+	public EmployeePojo viewEmployeeProfile(int empId){
+		Connection conn = null;
+		EmployeePojo employeeProfile = null;
+		try {
+			conn = DBUtil.makeConnection();
+			Statement stmt = conn.createStatement();
+			String query = "SELECT * FROM employee_details WHERE emp_id= " + empId;
+			ResultSet rs = stmt.executeQuery(query);
+			if(rs.next()) {
+				employeeProfile = new EmployeePojo(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4),rs.getString(5),rs.getString(6));
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return employeeProfile;
+	}
+
+	@Override
+	public EmployeePojo modifyEmployee(int empId, EmployeePojo employeePojo){
+		Connection conn = null;
+		try {
+			conn = DBUtil.makeConnection();
+			Statement stmt = conn.createStatement();
+			String query = "UPDATE employee_details SET emp_firstName = '" + employeePojo.getEmpFirstName()+"', emp_lastName = '"+ employeePojo.getEmpLastName()+"', emp_userName = '"+ employeePojo.getEmpUserName() + "', emp_password = '"+employeePojo.getEmpPassword()+"' WHERE emp_id= "+ empId; 
+			int rowAffected = stmt.executeUpdate(query);
+		} catch (SQLException e) {
+			e.getMessage();
+			e.printStackTrace();
+		}
+		return employeePojo;
+	}
+	
+	@Override
+	public boolean addReimbursment(ReimbursementPojo reimburse) {
+		try {
+			Connection con = DBUtil.makeConnection();
+			Statement stmt = con.createStatement();
+			
+			String query = "INSERT INTO reimbursment_details(emp_id, mgr_id, reimbursment_desc, reimbursment_amt, reimbursment_status)"
+							+"VALUES("+reimburse.getEmpId()+","+reimburse.getMgrId()+",'"+reimburse.getReimbursementDesc()+"',"+reimburse.getReimbursementAmt()+",'"+reimburse.getReimbursementStatus()+"')";
+			int rs = stmt.executeUpdate(query);
+			
+		} catch (SQLException e) {
+			
+			
+			e.printStackTrace();
+		}
+		return true;
+	}
+}
