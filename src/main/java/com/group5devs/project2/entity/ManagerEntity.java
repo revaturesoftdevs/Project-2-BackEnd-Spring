@@ -13,19 +13,19 @@ public class ManagerEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="mgrId")
+	@Column(name="mgr_id")
 	private int mgrId;
 	
-	@Column(name="mgrFirstName")
+	@Column(name="mgr_firstname")
 	private String mgrFirstName;
 	
-	@Column(name="mgrLastName")
+	@Column(name="mgr_lastname")
 	private String mgrLastName;
 	
-	@Column(name="mgrUserName")
+	@Column(name="mgr_username")
 	private String mgrUserName;
 	
-	@Column(name="mgrPassword")
+	@Column(name="mgr_password")
 	private String mgrPassword;
 
 	public ManagerEntity() {
