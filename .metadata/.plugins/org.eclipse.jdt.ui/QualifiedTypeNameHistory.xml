@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="dao.ManagerDao"/>
+    <fullyQualifiedTypeName name="exception.SystemException"/>
+    <fullyQualifiedTypeName name="dao.EmployeeDao"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.pojo.EmployeePojo"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.dao.EmployeeDao"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.entity.ManagerEntity"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.dao.ManagerDao"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.entity.ReimbursementEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.service.ManagerService"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.exceptions.SystemException"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.dao.ReimbursementDao"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.BeanUtils"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.pojo.ManagerPojo"/>
+    <fullyQualifiedTypeName name="com.group5devs.project2.entity.EmployeeEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+</qualifiedTypeNameHistroy>

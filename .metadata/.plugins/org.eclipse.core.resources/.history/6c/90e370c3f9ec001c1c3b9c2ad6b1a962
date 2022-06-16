@@ -1,0 +1,112 @@
+package com.group5devs.project2.entity;
+
+import javax.persistence.Column;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="reimbursment_details")
+public class ReimbursementEntity {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="reimbursment_id")
+	private int reimbursementId;
+	
+	@Column(name="emp_id")
+	private int empId;
+	
+	@Column(name="mgr_id")
+	private int mgrId;
+	
+	@Column(name="reimbursment_desc")
+	private String reimburementDesc;
+	
+	@Column(name="reimbursment_amt")
+	private Double reimbursementAmt;
+	
+	@Column(name="reimbursment_status")
+	private String reimbursementStatus;
+
+	public ReimbursementEntity() {
+
+	}
+
+	public ReimbursementEntity(int reimbursementId, int empId, int mgrId, String reimburementDesc,
+			Double reimbursementAmt, String reimbursementStatus) {
+		
+		this.reimbursementId = reimbursementId;
+		this.empId = empId;
+		this.mgrId = mgrId;
+		this.reimburementDesc = reimburementDesc;
+		this.reimbursementAmt = reimbursementAmt;
+		this.reimbursementStatus = reimbursementStatus;
+	}
+
+	public int getReimbursementId() {
+		return reimbursementId;
+	}
+
+	public void setReimbursementId(int reimbursementId) {
+		this.reimbursementId = reimbursementId;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public int getMgrId() {
+		return mgrId;
+	}
+
+	public void setMgrId(int mgrId) {
+		this.mgrId = mgrId;
+	}
+
+	public String getReimburementDesc() {
+		return reimburementDesc;
+	}
+
+	public void setReimburementDesc(String reimburementDesc) {
+		this.reimburementDesc = reimburementDesc;
+	}
+
+	public Double getReimbursementAmt() {
+		return reimbursementAmt;
+	}
+
+	public void setReimbursementAmt(Double reimbursementAmt) {
+		this.reimbursementAmt = reimbursementAmt;
+	}
+
+	public String getReimbursementStatus() {
+		return reimbursementStatus;
+	}
+
+	public void setReimbursementStatus(String reimbursementStatus) {
+		this.reimbursementStatus = reimbursementStatus;
+	}
+
+	@Override
+	public String toString() {
+		return "ReimbursementEntity [reimbursementId=" + reimbursementId + ", empId=" + empId + ", mgrId=" + mgrId
+				+ ", reimburementDesc=" + reimburementDesc + ", reimbursementAmt=" + reimbursementAmt
+				+ ", reimbursementStatus=" + reimbursementStatus + "]";
+	}
+
+	
+
+	
+	
+	
+	
+	
+}

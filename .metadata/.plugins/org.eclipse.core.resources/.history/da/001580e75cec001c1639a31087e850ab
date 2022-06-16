@@ -1,0 +1,28 @@
+package com.group5devs.project2.dao;
+import com.group5devs.project2.pojo.*;
+import com.group5devs.project2.entity.ManagerEntity;
+import com.group5devs.project2.exceptions.*;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+
+
+public interface ManagerDao  extends JpaRepository<ManagerEntity, Integer>{
+	
+//	ManagerPojo Login(ManagerPojo managerPojo) throws SystemException;
+//	
+//	List<ReimbursementPojo> viewAllPendingReimbursements(int mgrId) throws SystemException;
+//	
+//	List<ReimbursementPojo> viewAllResolvedReimbursements(int mgrId) throws SystemException;
+//	
+//	List<ReimbursementPojo> viewIndividualReimbursement(int mgrId, int empId) throws SystemException;
+//	
+//	List<EmployeePojo> viewAllEmployees(int mgrId) throws SystemException;
+//	
+//	boolean approveReimbursement(int empId,int reimbursementId) throws SystemException;
+//	
+//	boolean denyReimbursement(int empId,int reimbursementId) throws SystemException;
+
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel" value="1"/>
+	<item key="GitSelectRepositoryPage.lastRepository" value="C:\Users\cartm\OneDrive\Documents\GitHub\Project-2-BackEnd-Spring\.git"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="C:\Users\cartm\OneDrive\Documents\GitHub\Project-2-BackEnd-Spring\.git"/>
+	</list>
+	<section name="GitImportWizard">
+	</section>
+</section>

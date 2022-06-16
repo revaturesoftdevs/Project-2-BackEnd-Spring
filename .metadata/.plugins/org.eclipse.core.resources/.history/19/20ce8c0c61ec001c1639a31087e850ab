@@ -1,0 +1,5 @@
+package com.group5devs.project2.dao;
+
+public interface ReimbursementDao {
+
+}

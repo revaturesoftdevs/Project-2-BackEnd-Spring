@@ -1,0 +1,28 @@
+package com.group5devs.project2.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.group5devs.project2.exceptions.SystemException;
+import com.group5devs.project2.pojo.ManagerPojo;
+import com.group5devs.project2.service.ManagerService;
+
+@RestController
+@RequestMapping("api")
+public class ManagerController {
+	
+	@Autowired
+	ManagerService managerService;
+	
+	
+	@PostMapping("loginManager")
+	public ManagerPojo Login(ManagerPojo managerPojo)throws SystemException{
+		
+		
+		return managerPojo;
+		
+	}
+	
+}

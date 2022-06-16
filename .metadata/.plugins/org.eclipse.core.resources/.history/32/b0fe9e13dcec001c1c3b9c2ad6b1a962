@@ -1,0 +1,59 @@
+package com.group5devs.project2.service;
+
+import com.group5devs.project2.pojo.*;
+import com.group5devs.project2.exceptions.*;
+
+import java.sql.SQLException;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.group5devs.project2.dao.*;
+
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService{
+	@Autowired
+	EmployeeDao employeeDao;
+
+	@Override
+	public EmployeePojo login(EmployeePojo employeePojo) throws SystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ReimbursementPojo> viewPendingReimbursements(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ReimbursementPojo> viewResolvedReimbursements(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmployeePojo viewEmployeeProfile(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public EmployeePojo modifyEmployee(int empId, EmployeePojo employeePojo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean addReimbursment(ReimbursementPojo reimburse) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+	
+}

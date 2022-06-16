@@ -1,0 +1,39 @@
+package com.group5devs.project2.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.group5devs.project2.exceptions.SystemException;
+import com.group5devs.project2.pojo.ManagerPojo;
+import com.group5devs.project2.pojo.ReimbursementPojo;
+import com.group5devs.project2.service.ManagerService;
+
+@RestController
+@RequestMapping("api")
+public class ManagerController {
+	
+	@Autowired
+	ManagerService managerService;
+	
+	
+	@PostMapping("loginManager")
+	public ManagerPojo Login(@RequestBody ManagerPojo managerPojo)throws SystemException{
+		
+		return managerService.Login(managerPojo);	
+	}
+	
+	
+	@GetMapping("PendingReimbursements/{mid}")
+	public List<ReimbursementPojo> viewAllPendingReimbursements(@PathVariable("mid") int mgrId) throws SystemException{
+		
+		return managerService.viewAllPendingReimbursements(mgrId);	
+	}
+	
+}

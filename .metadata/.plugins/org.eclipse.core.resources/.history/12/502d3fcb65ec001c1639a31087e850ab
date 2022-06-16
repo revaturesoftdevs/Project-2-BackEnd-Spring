@@ -1,0 +1,57 @@
+package com.group5devs.project2.entity;
+
+import javax.persistence.Column;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="reimbursment_details")
+public class ReimbursementEntity {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="reimbursementId")
+	private int reimbursementId;
+	
+	@Column(name="empId")
+	private int empId;
+	
+	@Column(name="mgrId")
+	private int mgrId;
+	
+	@Column(name="reimburementDesc")
+	private String reimburementDesc;
+	
+	@Column(name="reimbursementAmt")
+	private String reimbursementAmt;
+	
+	@Column(name="reimbursementStatus")
+	private String reimbursementStatus;
+
+	public ReimbursementEntity() {
+
+	}
+
+	public ReimbursementEntity(int reimbursementId, int empId, int mgrId, String reimburementDesc,
+			String reimbursementAmt, String reimbursementStatus) {
+		super();
+		this.reimbursementId = reimbursementId;
+		this.empId = empId;
+		this.mgrId = mgrId;
+		this.reimburementDesc = reimburementDesc;
+		this.reimbursementAmt = reimbursementAmt;
+		this.reimbursementStatus = reimbursementStatus;
+	}
+
+	
+
+	
+	
+	
+	
+	
+}

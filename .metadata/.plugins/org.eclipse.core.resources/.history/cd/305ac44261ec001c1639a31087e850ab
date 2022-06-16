@@ -1,0 +1,7 @@
+package com.group5devs.project2.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ReimbursementDao extends JpaRepository {
+
+}

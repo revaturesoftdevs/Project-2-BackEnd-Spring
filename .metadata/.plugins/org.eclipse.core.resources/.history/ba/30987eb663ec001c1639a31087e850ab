@@ -1,0 +1,77 @@
+package com.group5devs.project2.service;
+
+import java.util.List;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Service;
+
+import com.group5devs.project2.dao.*;
+import com.group5devs.project2.entity.ManagerEntity;
+import com.group5devs.project2.entity.ReimbursementEntity;
+import com.group5devs.project2.pojo.*;
+import com.group5devs.project2.service.*;
+
+import com.group5devs.project2.exceptions.*;
+
+
+
+
+@Service
+public class ManagerServiceImpl implements ManagerService {
+	@Autowired
+	ManagerDao managerDao;
+	
+	@Autowired
+	ReimbursementDao reimbursementDao;
+
+	@Override
+	public ManagerPojo Login(ManagerPojo managerPojo) throws SystemException {
+		ManagerEntity managerEntity = new ManagerEntity();
+		
+		ManagerEntity returnEntity = managerDao.findByMgrUserNameAndMgrPassword(managerEntity);
+		ManagerPojo returnedManagerPojo = new ManagerPojo();
+		BeanUtils.copyProperties(returnEntity, returnedManagerPojo);
+		return returnedManagerPojo;
+	}
+
+	@Override
+	public List<ReimbursementPojo> viewAllPendingReimbursements(int mgrId) throws SystemException {
+		
+		List <ReimbursementEntity> allPendingEntity = reimbursementDao.findByReimbursementStatusAndMgrId(mgrId);
+		return null;
+	}
+
+	@Override
+	public List<ReimbursementPojo> viewAllResolvedReimbursements(int mgrId) throws SystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ReimbursementPojo> viewIndividualReimbursement(int mgrId, int empId) throws SystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean approveReimbursement(int empId, int reimbursementId) throws SystemException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean denyReimbursement(int empId, int reimbursementId) throws SystemException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<EmployeePojo> viewAllEmployees(int mgrId) throws SystemException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

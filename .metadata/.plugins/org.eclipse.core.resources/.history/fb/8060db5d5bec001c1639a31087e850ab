@@ -1,0 +1,21 @@
+package com.group5devs.project2.service;
+
+import com.group5devs.project2.pojo.*;
+import com.group5devs.project2.exceptions.*;
+
+import java.sql.SQLException;
+
+import java.util.List;
+
+import com.group5devs.project2.dao.*;
+import com.group5devs.project2.pojo.EmployeePojo;
+
+
+
+public class EmployeeServiceImpl implements EmployeeService{
+	
+	EmployeeDao employeeDao;
+	
+	
+	
+}
