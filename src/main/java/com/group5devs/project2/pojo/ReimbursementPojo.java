@@ -1,4 +1,4 @@
-package model;
+package com.group5devs.project2.pojo;
 
 import java.util.Objects;
 
@@ -17,11 +17,11 @@ public class ReimbursementPojo {
 	}
 
 
-	public ReimbursementPojo(int reimbursementId, int userId, int mgrId, String reimbursementDesc,
+	public ReimbursementPojo(int reimbursementId, int empId, int mgrId, String reimbursementDesc,
 			Double reimbursementAmt, String reimbursementStatus) {
 		super();
 		this.reimbursementId = reimbursementId;
-		this.empId = userId;
+		this.empId = empId;
 		this.mgrId = mgrId;
 		this.reimbursementDesc = reimbursementDesc;
 		this.reimbursementAmt = reimbursementAmt;

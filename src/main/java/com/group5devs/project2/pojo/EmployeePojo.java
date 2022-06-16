@@ -1,4 +1,4 @@
-package model;
+package com.group5devs.project2.pojo;
 
 import java.util.Objects;
 

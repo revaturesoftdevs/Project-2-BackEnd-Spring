@@ -13,22 +13,22 @@ public class EmployeeEntity {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="empId")
+	@Column(name="emp_id")
 	private int empId;
 	
-	@Column(name="mgrId")
+	@Column(name="mgr_id")
 	private int mgrId;
 	
-	@Column(name="empFirstName")
+	@Column(name="emp_firstname")
 	private String empFirstName;
 	
-	@Column(name="empLastName")
+	@Column(name="emp_lastname")
 	private String empLastName;
 	
-	@Column(name="empUserName")
+	@Column(name="emp_username")
 	private String empUserName;
 	
-	@Column(name="empPassword")
+	@Column(name="emp_password")
 	private String empPassword;
 	
 	public EmployeeEntity() {

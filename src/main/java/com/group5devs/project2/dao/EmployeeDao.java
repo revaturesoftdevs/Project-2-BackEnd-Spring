@@ -1,25 +1,27 @@
-package dao;
+package com.group5devs.project2.dao;
 
-import java.sql.SQLException;
 import java.util.List;
 
-import exception.SystemException;
-import model.ReimbursementPojo;
-import model.EmployeePojo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.group5devs.project2.entity.EmployeeEntity;
+import com.group5devs.project2.pojo.EmployeePojo;
 
 
-public interface EmployeeDao {
+
+
+
+
+@Repository
+public interface EmployeeDao extends JpaRepository<EmployeeEntity, Integer>{
 	
+//	String findByEmpUserName(String empUserName);
+//	String findByEmpPassword(String empPassword);
 	
-	EmployeePojo login (EmployeePojo employeePojo)throws SystemException;
+	@Query("From EmployeeEntity WHERE empUserName = ?1 AND empPassword = ?2")
+	  EmployeeEntity findByEmpUserNameAndEmpPassword(String empUserName, String empPassword);
+	}
 	
-	List<ReimbursementPojo> viewPendingReimbursements (int empId);
-	
-	List<ReimbursementPojo> viewResolvedReimbursements (int empId);
-	
-	EmployeePojo viewEmployeeProfile (int empId);
-	
-	EmployeePojo modifyEmployee (int empId,EmployeePojo employeePojo);
-	
-	boolean addReimbursment(ReimbursementPojo reimburse);
-}
+

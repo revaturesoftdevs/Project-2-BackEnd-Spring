@@ -1,23 +1,26 @@
-package service;
+package com.group5devs.project2.service;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import exception.SystemException;
-import model.EmployeePojo;
-import model.ReimbursementPojo;
+import com.group5devs.project2.pojo.EmployeePojo;
+import com.group5devs.project2.pojo.ReimbursementPojo;
+
+
 
 public interface EmployeeService {
 	
-	EmployeePojo login (EmployeePojo employeePojo) throws SystemException;
+	EmployeePojo login (EmployeePojo employeePojo);
 	
 	List<ReimbursementPojo> viewPendingReimbursements (int empId);
 	
-	List<ReimbursementPojo> viewResolvedReimbursements (int empId);
+	List<ReimbursementPojo> viewResolvedReimbursements (short empId);
 	
 	EmployeePojo viewEmployeeProfile (int empId);
 	
-	EmployeePojo modifyEmployee(int empId, EmployeePojo employeePojo);
+	EmployeePojo modifyEmployee(EmployeePojo employeePojo);
 
-	boolean addReimbursment(ReimbursementPojo reimburse);
+	ReimbursementPojo addReimbursment(ReimbursementPojo reimburse);
+
+
 }

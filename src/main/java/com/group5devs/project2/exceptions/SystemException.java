@@ -1,4 +1,4 @@
-package exception;
+package com.group5devs.project2.exceptions;
 
 public class SystemException extends Exception{
 	
