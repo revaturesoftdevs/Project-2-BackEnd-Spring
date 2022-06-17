@@ -139,5 +139,17 @@ public class ManagerServiceImpl implements ManagerService {
 
 		return allEmployeePojo;
 	}
+	
+	public EmployeePojo individualEmployee(int mgrId, int empId) throws SystemException{
+		
+		EmployeeEntity employeeEntity = managerDao.findEmployee(mgrId,empId);
+		EmployeePojo employeePojo= new EmployeePojo();
+		
+		BeanUtils.copyProperties(employeeEntity, employeePojo);
+		return employeePojo;
+		
+		
+		
+	}
 
 }

@@ -22,4 +22,6 @@ public interface ManagerService {
 	boolean denyReimbursement(int empId,int reimbursementId) throws SystemException;
 	
 	List<EmployeePojo> viewAllEmployees(int mgrId) throws SystemException;
+	
+	public EmployeePojo individualEmployee(int mgrId, int empId) throws SystemException;
 }

@@ -68,6 +68,11 @@ public class ManagerController {
 		return managerService.viewAllEmployees(mgrId);
 	}
 	
+	//server.get("/individual-employee/{mid}/{eid}
+	@GetMapping("individual-employee/{mid}/{eid}")
+	public EmployeePojo individualEmployee(@PathVariable("mid")int mgrId, @PathVariable("eid")int empId) throws SystemException{
+		return managerService.individualEmployee(mgrId, empId);
+	}
 	
 
 }

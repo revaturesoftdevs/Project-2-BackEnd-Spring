@@ -41,6 +41,10 @@ public interface ManagerDao  extends JpaRepository<ManagerEntity, Integer>{
 	@Query("update ReimbursementEntity set reimbursment_status = 'approved' where emp_id =:empId AND reimbursment_id=:reimbursementId")
 	boolean approveReimbursement(@Param("empId") int empId, @Param("reimbursementId")int reimbursementId); 
 	
+	
+	@Query("select u from EmployeeEntity u where u.mgrId=:mgrId and u.empId=:empId")
+	EmployeeEntity findEmployee(@Param("mgrId")int mgrId,@Param("empId")int empId);
+	
 //	ManagerPojo Login(ManagerPojo managerPojo) throws SystemException;
 //	
 //	List<ReimbursementPojo> viewAllPendingReimbursements(int mgrId) throws SystemException;
