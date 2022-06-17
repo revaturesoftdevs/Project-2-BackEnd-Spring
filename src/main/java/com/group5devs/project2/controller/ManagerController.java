@@ -20,7 +20,7 @@ import com.group5devs.project2.pojo.ManagerPojo;
 import com.group5devs.project2.pojo.ReimbursementPojo;
 import com.group5devs.project2.service.ManagerService;
 import com.group5devs.project2.service.ManagerServiceImpl;
-
+@CrossOrigin
 @RestController
 @RequestMapping("api")
 public class ManagerController {
@@ -28,7 +28,7 @@ public class ManagerController {
 	@Autowired
 	ManagerService managerService;
 
-	@CrossOrigin("http://localhost:7272")
+	
 	@PostMapping("login-manager")
 	public ManagerPojo Login(@RequestBody ManagerPojo managerPojo) throws SystemException {
 
@@ -72,6 +72,13 @@ public class ManagerController {
 	@GetMapping("individual-employee/{mid}/{eid}")
 	public EmployeePojo individualEmployee(@PathVariable("mid")int mgrId, @PathVariable("eid")int empId) throws SystemException{
 		return managerService.individualEmployee(mgrId, empId);
+	}
+	
+	
+	//Individual employee reimbursment
+	@GetMapping("individual-employee-reimbursement/{mid}/{eid}")
+	public List <ReimbursementPojo> findEmployeeReimb(@PathVariable("mid")int mgrId,@PathVariable("eid")int empId)throws SystemException{
+		return managerService.individualEmployeeReimbursement(mgrId, empId);
 	}
 	
 

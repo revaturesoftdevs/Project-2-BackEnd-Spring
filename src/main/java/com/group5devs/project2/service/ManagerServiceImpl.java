@@ -65,9 +65,9 @@ public class ManagerServiceImpl implements ManagerService {
 
 	@Override
 	public List<ReimbursementPojo> viewAllResolvedReimbursements(int mgrId) throws SystemException {
-			List<ReimbursementPojo> allResolvedPojo = new ArrayList<>();
-			List<ReimbursementEntity> allResolvedEntity = managerDao.findAllResolvedReimbursementStatusAndMgrId(mgrId);
-		 System.out.println(mgrId);
+		List<ReimbursementPojo> allResolvedPojo = new ArrayList<>();
+		List<ReimbursementEntity> allResolvedEntity = managerDao.findAllResolvedReimbursementStatusAndMgrId(mgrId);
+		System.out.println(mgrId);
 		for (ReimbursementEntity fetchedResolvedEntity : allResolvedEntity) {
 			ReimbursementPojo returnReimbursementPojo = new ReimbursementPojo(
 					fetchedResolvedEntity.getReimbursementId(), fetchedResolvedEntity.getEmpId(),
@@ -76,7 +76,7 @@ public class ManagerServiceImpl implements ManagerService {
 			allResolvedPojo.add(returnReimbursementPojo);
 		}
 
-	System.out.println(mgrId);
+		System.out.println(mgrId);
 		return allResolvedPojo;
 	}
 
@@ -139,17 +139,30 @@ public class ManagerServiceImpl implements ManagerService {
 
 		return allEmployeePojo;
 	}
-	
-	public EmployeePojo individualEmployee(int mgrId, int empId) throws SystemException{
-		
-		EmployeeEntity employeeEntity = managerDao.findEmployee(mgrId,empId);
-		EmployeePojo employeePojo= new EmployeePojo();
-		
+
+	public EmployeePojo individualEmployee(int mgrId, int empId) throws SystemException {
+
+		EmployeeEntity employeeEntity = managerDao.findEmployee(mgrId, empId);
+		EmployeePojo employeePojo = new EmployeePojo();
+
 		BeanUtils.copyProperties(employeeEntity, employeePojo);
 		return employeePojo;
+
+	}
+
+		public List <ReimbursementPojo> individualEmployeeReimbursement(int mgrId, int empId) throws SystemException {
+
+		List <ReimbursementEntity> retrievedReimbursement = managerDao.findEmployeeReimb(mgrId, empId);
+		List<ReimbursementPojo> returnedEmployeeReimbursements = new ArrayList<>();
 		
-		
-		
+		for(ReimbursementEntity eachEntity : retrievedReimbursement) {
+			
+			ReimbursementPojo returnPojo = new ReimbursementPojo(eachEntity.getReimbursementId(),eachEntity.getEmpId(),eachEntity.getMgrId(),eachEntity.getReimbursementDesc(),eachEntity.getReimbursementAmt(),eachEntity.getReimbursementStatus());
+			returnedEmployeeReimbursements.add(returnPojo);
+		}
+	
+		return returnedEmployeeReimbursements;
+
 	}
 
 }

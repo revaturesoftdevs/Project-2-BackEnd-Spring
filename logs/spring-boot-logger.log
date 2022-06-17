@@ -1,0 +1,6 @@
+2022-06-17 18:09:38,879 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 17.0.2 on BerlyPaul with PID 20248 (C:\Users\cartm\OneDrive\Desktop\Group5P2\Project-2-BackEnd-Spring\target\classes started by cartm in C:\Users\cartm\OneDrive\Desktop\Group5P2\Project-2-BackEnd-Spring)
+2022-06-17 18:09:38,881 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-17 18:09:43,737 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 5.448 seconds (JVM running for 6.276)
+2022-06-17 18:12:58,981 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 17.0.2 on BerlyPaul with PID 20248 (C:\Users\cartm\OneDrive\Desktop\Group5P2\Project-2-BackEnd-Spring\target\classes started by cartm in C:\Users\cartm\OneDrive\Desktop\Group5P2\Project-2-BackEnd-Spring)
+2022-06-17 18:12:58,983 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-17 18:13:00,087 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 1.147 seconds (JVM running for 202.627)

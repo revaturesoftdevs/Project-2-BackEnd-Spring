@@ -24,4 +24,6 @@ public interface ManagerService {
 	List<EmployeePojo> viewAllEmployees(int mgrId) throws SystemException;
 	
 	public EmployeePojo individualEmployee(int mgrId, int empId) throws SystemException;
+	
+	public List<ReimbursementPojo> individualEmployeeReimbursement(int mgrId, int empId) throws SystemException;
 }
