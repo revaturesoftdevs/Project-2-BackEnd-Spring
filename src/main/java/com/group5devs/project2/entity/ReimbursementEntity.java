@@ -35,6 +35,20 @@ public class ReimbursementEntity {
 
 	}
 	
+	
+	
+	public ReimbursementEntity(int empId, int mgrId, String reimbursementDesc, Double reimbursementAmt,
+			String reimbursementStatus) {
+		super();
+		this.empId = empId;
+		this.mgrId = mgrId;
+		this.reimbursementDesc = reimbursementDesc;
+		this.reimbursementAmt = reimbursementAmt;
+		this.reimbursementStatus = reimbursementStatus;
+	}
+
+
+
 	public ReimbursementEntity(int reimbursementId, int empId, int mgrId, String reimbursementDesc,
 			Double reimbursementAmt, String reimbursementStatus) {
 		super();

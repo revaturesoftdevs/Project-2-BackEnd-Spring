@@ -2,9 +2,12 @@ package com.group5devs.project2.controller;
 
 import java.util.List;
 
+//import org.graalvm.compiler.hotspot.nodes.profiling.RandomSeedNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,6 +30,9 @@ public class ManagerController {
 	// final static Logger LOG = LoggerFactory.getLogger(ManagerController.class);
 	@Autowired
 	ManagerService managerService;
+	
+//	@Autowired
+//	JavaMailSender javaMailSender;
 
 	@CrossOrigin("http://localhost:7272")
 	@PostMapping("login-manager")
@@ -53,7 +59,7 @@ public class ManagerController {
 
 	@PutMapping("approve-reimbursement/{eid}/{rid}")
 	public boolean approveReimbursement(@PathVariable("eid")int empId,@PathVariable("rid") int reimbursementId) throws SystemException {
-			return managerService.approveReimbursement(empId, reimbursementId);
+		return managerService.approveReimbursement(empId, reimbursementId);
 	}
 	
 	@PutMapping("deny-reimbursement/{eid}/{rid}")
@@ -67,6 +73,25 @@ public class ManagerController {
 		
 		return managerService.viewAllEmployees(mgrId);
 	}
+	
+	@PostMapping("register-employee")
+	public EmployeePojo registerEmployee(@RequestBody EmployeePojo employeePojo) {
+		return managerService.registerAnEmployee(employeePojo);
+	}
+	
+//	@RequestMapping("/sendEmail")
+//	public String sendEmail() {
+//		SimpleMailMessage message = new SimpleMailMessage();
+//		
+//		message.setFrom("devarianil415@gmail.com");
+//		message.setTo("devarianil415@gmail.com");
+//		message.setSubject("Subject: Approved Status");
+//		message.setText("Body: you're status has been Approved");
+//		
+//		javaMailSender.send(message);
+//		
+//		return "your mail sent successfully!";
+//	}
 	
 	
 

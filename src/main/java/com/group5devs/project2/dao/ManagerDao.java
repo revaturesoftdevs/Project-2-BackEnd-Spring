@@ -6,7 +6,10 @@ import com.group5devs.project2.entity.ReimbursementEntity;
 import com.group5devs.project2.exceptions.*;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
@@ -40,6 +43,17 @@ public interface ManagerDao  extends JpaRepository<ManagerEntity, Integer>{
 
 	@Query("update ReimbursementEntity set reimbursment_status = 'approved' where emp_id =:empId AND reimbursment_id=:reimbursementId")
 	boolean approveReimbursement(@Param("empId") int empId, @Param("reimbursementId")int reimbursementId); 
+	
+	@Transactional
+	@Modifying
+	@Query(value = "insert into employee_details(mgr_Id,emp_firstname,emp_lastname,emp_username,emp_password) VALUES (:mgrId,:empFirstName,:empLastName,:empUserName,:empPassword)", nativeQuery = true)
+	int insertAttributes(@Param("mgrId") int mgrId, @Param("empFirstName") String empFirstName, @Param("empLastName") String empLastName, @Param("empUserName") String empUserName, @Param("empPassword") String empPassword);
+	
+	@Query(value = "select * from employee_details where emp_id=(select max(emp_id) from employee_details)", nativeQuery = true)
+	EmployeeEntity findByEmpId();
+	
+	
+	
 	
 //	ManagerPojo Login(ManagerPojo managerPojo) throws SystemException;
 //	

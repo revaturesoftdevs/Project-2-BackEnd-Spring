@@ -15,6 +15,21 @@ public class ReimbursementPojo {
 	public ReimbursementPojo() {
 		
 	}
+	
+	
+
+
+	public ReimbursementPojo(int empId, int mgrId, String reimbursementDesc, Double reimbursementAmt,
+			String reimbursementStatus) {
+		super();
+		this.empId = empId;
+		this.mgrId = mgrId;
+		this.reimbursementDesc = reimbursementDesc;
+		this.reimbursementAmt = reimbursementAmt;
+		this.reimbursementStatus = reimbursementStatus;
+	}
+
+
 
 
 	public ReimbursementPojo(int reimbursementId, int empId, int mgrId, String reimbursementDesc,

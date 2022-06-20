@@ -8,17 +8,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
-import com.group5devs.project2.dao.*;
+import com.group5devs.project2.dao.ManagerDao;
+import com.group5devs.project2.dao.ReimbursementDao;
 import com.group5devs.project2.entity.EmployeeEntity;
 import com.group5devs.project2.entity.ManagerEntity;
 import com.group5devs.project2.entity.ReimbursementEntity;
-import com.group5devs.project2.pojo.*;
-import com.group5devs.project2.service.*;
-
-import com.group5devs.project2.exceptions.*;
+import com.group5devs.project2.exceptions.SystemException;
+import com.group5devs.project2.pojo.EmployeePojo;
+import com.group5devs.project2.pojo.ManagerPojo;
+import com.group5devs.project2.pojo.ReimbursementPojo;
 
 @Service
 public class ManagerServiceImpl implements ManagerService {
@@ -30,9 +32,28 @@ public class ManagerServiceImpl implements ManagerService {
 	final static Logger LOG = LoggerFactory.getLogger(ManagerServiceImpl.class);
 	@Autowired
 	ManagerDao managerDao;
+	
+	@Autowired
+	private JavaMailSender javaMailSender;
 
 	@Autowired
 	ReimbursementDao reimbursementDao;
+	
+//	public void sendEmail(String toEmail, String subject, String body) {
+//		
+//		SimpleMailMessage message = new SimpleMailMessage();
+//		message.setFrom("devarianil415@gmaul.com");
+//		message.setTo(toEmail);
+//		message.setText(body);
+//		message.setSubject(subject);
+//		
+//		mailSender.send(message);
+//		
+//		System.out.println("mail sent successfully..");
+//		
+//	}
+	
+	
 
 	@Override
 	public ManagerPojo Login(ManagerPojo managerPojo) throws SystemException {
@@ -93,10 +114,12 @@ public class ManagerServiceImpl implements ManagerService {
 		}
 		return allResolvedPojo;
 	}
-
+	
+//	@EventListener(ApplicationReadyEvent.class)
 	@Override
 	public boolean approveReimbursement(int empId, int reimbursementId) throws SystemException {
 		// 2 step process
+//		SimpleMailMessage message = new SimpleMailMessage();
 
 		// 1st - fetch the reimbursentment entoty by specfying the reimburse id
 		Optional<ReimbursementEntity> fetchedReimburmentEntity = reimbursementDao.findById(reimbursementId);
@@ -106,7 +129,16 @@ public class ManagerServiceImpl implements ManagerService {
 		// reimbursement entity
 		reimEntity.setReimbursementStatus("approved");
 		reimbursementDao.save(reimEntity);
-
+		
+//		message.setFrom("devarianil415@gmail.com");
+//		message.setTo("devarianil415@gmail.com");
+//		message.setSubject("Subject: Approved Status");
+//		message.setText("Body: you're status has been Approved");
+//		
+//		javaMailSender.send(message);
+		
+//		sendEmail("devarianil415@gmail.com", "Approved Reimbursement", "Anil kumar, you're Reimbursement has been Approved!");
+	
 		return true;
 	}
 
@@ -139,5 +171,34 @@ public class ManagerServiceImpl implements ManagerService {
 
 		return allEmployeePojo;
 	}
+	
+	@Override
+	public EmployeePojo registerAnEmployee(EmployeePojo employeePojo) {
+		SimpleMailMessage message = new SimpleMailMessage();
+		EmployeeEntity employeeEntity = new EmployeeEntity();
+		BeanUtils.copyProperties(employeePojo, employeeEntity);
+		
+		//  now pass the bookEntity object to spring data jpa to be updated into the table
+		
+		int returnedEmployeeEntity = managerDao.insertAttributes(employeeEntity.getMgrId(), employeeEntity.getEmpFirstName(), employeeEntity.getEmpLastName(), employeeEntity.getEmpUserName(), employeeEntity.getEmpPassword());
+		
+//		EmployeeEntity employeeEntity2 = managerDao.findByEmpId();
+//		
+//		System.out.println(employeeEntity2);
+//
+//		BeanUtils.copyProperties(employeeEntity2, employeePojo);
+//		
+//		System.out.println(employeePojo);
+		
+		message.setFrom("devarianil415@gmail.com");
+		message.setTo(employeePojo.getEmpLastName());
+		message.setSubject("Subject: Registration successfull");
+		message.setText("Body: you're registered with username: "+ employeePojo.getEmpUserName()+" and password: "+employeePojo.getEmpPassword());
+		
+		javaMailSender.send(message);
+	
+		return employeePojo;
+	}
+
 
 }
