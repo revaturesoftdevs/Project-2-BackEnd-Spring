@@ -54,6 +54,12 @@ public interface ManagerDao  extends JpaRepository<ManagerEntity, Integer>{
 	
 	
 	
+	@Query("select u from EmployeeEntity u where u.mgrId=:mgrId and u.empId=:empId")
+	EmployeeEntity findEmployee(@Param("mgrId")int mgrId,@Param("empId")int empId);
+	
+	@Query("SELECT u FROM ReimbursementEntity u WHERE u.mgrId=:mgrId AND u.empId=:empId")
+	public List <ReimbursementEntity> findEmployeeReimb(@Param("mgrId")int mgrId, @Param("empId")int empId);
+
 	
 //	ManagerPojo Login(ManagerPojo managerPojo) throws SystemException;
 //	
