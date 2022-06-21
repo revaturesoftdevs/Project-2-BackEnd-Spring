@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.group5devs.project2.exceptions.NoPendingRequestException;
+import com.group5devs.project2.exceptions.NoResolvedRequestException;
 import com.group5devs.project2.pojo.EmployeePojo;
 import com.group5devs.project2.pojo.ReimbursementPojo;
 import com.group5devs.project2.service.EmployeeService;
@@ -26,13 +28,13 @@ public class EmployeeController {
 	
 //	tested
 	@GetMapping("emp-pending-reimbursements/{eid}")
-	public List<ReimbursementPojo> getAllPendingReimbursements(@PathVariable("eid") int empId){
+	public List<ReimbursementPojo> getAllPendingReimbursements(@PathVariable("eid") int empId)throws NoPendingRequestException{
 		return employeeService.viewPendingReimbursements(empId);
 	}
 	
 //	tested
 	@GetMapping("emp-resolved-reimbursements/{eid}")
-	public List<ReimbursementPojo> getAllReslovedReimbursements(@PathVariable("eid") short empId){
+	public List<ReimbursementPojo> getAllReslovedReimbursements(@PathVariable("eid") short empId)throws NoResolvedRequestException{
 		return employeeService.viewResolvedReimbursements(empId);
 	}
 	

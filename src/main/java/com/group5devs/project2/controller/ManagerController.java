@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.group5devs.project2.exceptions.NoPendingRequestException;
+import com.group5devs.project2.exceptions.NoRequestException;
+import com.group5devs.project2.exceptions.NoResolvedRequestException;
 import com.group5devs.project2.exceptions.SystemException;
 import com.group5devs.project2.pojo.EmployeePojo;
 import com.group5devs.project2.pojo.ManagerPojo;
@@ -42,7 +45,7 @@ public class ManagerController {
 	}
 
 	@GetMapping("pending-reimbursements/{mid}")
-	public List<ReimbursementPojo> viewAllPendingReimbursements(@PathVariable("mid") int mgrId) throws SystemException {
+	public List<ReimbursementPojo> viewAllPendingReimbursements(@PathVariable("mid") int mgrId) throws SystemException, NoPendingRequestException {
 
 		// LOG.info("exited View all pending reimbursements method in the controller
 		// layer");
@@ -52,7 +55,7 @@ public class ManagerController {
 
 	@GetMapping("resolved-reimbursements/{mid}")
 	public List<ReimbursementPojo> viewAllResolvedReimbursements(@PathVariable("mid") int mgrId)
-			throws SystemException {
+			throws SystemException, NoResolvedRequestException {
 
 		return managerService.viewAllResolvedReimbursements(mgrId);
 	}
@@ -104,7 +107,7 @@ public class ManagerController {
 	
 	//Individual employee reimbursment
 	@GetMapping("individual-employee-reimbursement/{mid}/{eid}")
-	public List <ReimbursementPojo> findEmployeeReimb(@PathVariable("mid")int mgrId,@PathVariable("eid")int empId)throws SystemException{
+	public List <ReimbursementPojo> findEmployeeReimb(@PathVariable("mid")int mgrId,@PathVariable("eid")int empId)throws SystemException, NoRequestException{
 		return managerService.individualEmployeeReimbursement(mgrId, empId);
 	}
 

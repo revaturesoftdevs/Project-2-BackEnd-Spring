@@ -16,6 +16,8 @@ import com.group5devs.project2.pojo.ReimbursementPojo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.group5devs.project2.entity.*;
+import com.group5devs.project2.exceptions.NoPendingRequestException;
+import com.group5devs.project2.exceptions.NoResolvedRequestException;
 
 
 @Service
@@ -49,11 +51,15 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
-	public List<ReimbursementPojo> viewPendingReimbursements(int empId) {
+	public List<ReimbursementPojo> viewPendingReimbursements(int empId) throws NoPendingRequestException {
 //		LOG.info("Entered EmployeeserviceImpl in employeeservice");
 		Iterable<Integer> emp_id;
 		List<ReimbursementEntity> allPendingReimbursementEntity = reimbursementDao.findByEmpId(empId);
 		List<ReimbursementPojo> allPendingReimbursementPojo = new ArrayList<ReimbursementPojo>();
+		
+		if(allPendingReimbursementEntity.isEmpty()) {
+			throw new NoPendingRequestException();
+		}
 		for(ReimbursementEntity eachReimbursement : allPendingReimbursementEntity) {
 			ReimbursementPojo returnReimbursementPojo = new ReimbursementPojo(eachReimbursement.getReimbursementId(),eachReimbursement.getEmpId(),eachReimbursement.getMgrId(),eachReimbursement.getReimbursementDesc(),eachReimbursement.getReimbursementAmt(),eachReimbursement.getReimbursementStatus());
 			allPendingReimbursementPojo.add(returnReimbursementPojo);
@@ -62,11 +68,14 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
-	public List<ReimbursementPojo> viewResolvedReimbursements(short empId) {
+	public List<ReimbursementPojo> viewResolvedReimbursements(short empId) throws NoResolvedRequestException {
 //		LOG.info("entered viewResolvedReimbursements in service");
 //		Iterable<Integer> emp_id;
 		List<ReimbursementEntity> allResolvedReimbursementEntity = reimbursementDao.findByEmpId(empId);
 		List<ReimbursementPojo> allResolvedReimbursementPojo = new ArrayList<ReimbursementPojo>();
+		if(allResolvedReimbursementEntity.isEmpty()) {
+			throw new NoResolvedRequestException();
+		}
 		for(ReimbursementEntity eachReimbursement : allResolvedReimbursementEntity) {
 			ReimbursementPojo returnReimbursementPojo = new ReimbursementPojo(eachReimbursement.getReimbursementId(),eachReimbursement.getEmpId(),eachReimbursement.getMgrId(),eachReimbursement.getReimbursementDesc(),eachReimbursement.getReimbursementAmt(),eachReimbursement.getReimbursementStatus());
 			allResolvedReimbursementPojo.add(returnReimbursementPojo);

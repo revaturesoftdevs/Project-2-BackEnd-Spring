@@ -11,9 +11,9 @@ public interface ManagerService {
 	
 	ManagerPojo Login(ManagerPojo managerPojo) throws SystemException;
 	
-	List<ReimbursementPojo> viewAllPendingReimbursements(int mgrId) throws SystemException;
+	List<ReimbursementPojo> viewAllPendingReimbursements(int mgrId) throws SystemException, NoPendingRequestException;
 	
-	List<ReimbursementPojo> viewAllResolvedReimbursements(int mgrId) throws SystemException;
+	List<ReimbursementPojo> viewAllResolvedReimbursements(int mgrId) throws SystemException, NoResolvedRequestException;
 	
 	List<ReimbursementPojo> viewIndividualReimbursement(int mgrId, int empId) throws SystemException;
 	
@@ -28,6 +28,6 @@ public interface ManagerService {
 
 	public EmployeePojo individualEmployee(int mgrId, int empId) throws SystemException;
 	
-	public List<ReimbursementPojo> individualEmployeeReimbursement(int mgrId, int empId) throws SystemException;
+	public List<ReimbursementPojo> individualEmployeeReimbursement(int mgrId, int empId) throws SystemException, NoRequestException;
 
 }
