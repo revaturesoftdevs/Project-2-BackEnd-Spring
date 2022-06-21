@@ -130,3 +130,11 @@
 2022-06-20 19:36:31,135 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13932 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
 2022-06-20 19:36:31,136 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
 2022-06-20 19:36:35,303 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 4.354 seconds (JVM running for 5880.976)
+2022-06-20 19:43:13,173 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16552 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 19:43:13,176 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 19:43:23,922 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 11.673 seconds (JVM running for 12.766)
+2022-06-20 19:56:50,042 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-5] Entered View all pending reimbursements method in the service
+2022-06-20 19:56:50,046 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-5] Exited the view pending reimbursment in the service layer
+2022-06-20 19:56:56,569 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-7] Entered View all pending reimbursements method in the service
+2022-06-20 20:27:22,278 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16552 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 20:27:22,280 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"

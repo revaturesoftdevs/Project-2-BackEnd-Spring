@@ -60,17 +60,22 @@ public class ManagerServiceImpl implements ManagerService {
 
 	@Override
 	public ManagerPojo Login(ManagerPojo managerPojo) throws SystemException {
+		LOG.info("Entered Login() in ManagerServiceImpl...");
 		String incomingUsername = managerPojo.getMgrUserName();
 		String incomingPassword = managerPojo.getMgrPassword();
 		ManagerEntity managerEntity = managerDao.findByMgrUserNameAndMgrPassword(incomingUsername, incomingPassword);
 		ManagerPojo returnedManagerPojo = new ManagerPojo();
 		BeanUtils.copyProperties(managerEntity, returnedManagerPojo);
+		LOG.info("Exited Login() in ManagerServiceImpl...");
 		return returnedManagerPojo;
 	}
 
 	@Override
+
 	public List<ReimbursementPojo> viewAllPendingReimbursements(int mgrId) throws SystemException, NoPendingRequestException {
 		LOG.info("Entered View all pending reimbursements method in the service");
+
+	
 		System.out.println("mgrid:" + mgrId);
 
 		List<ReimbursementEntity> allPendingEntity = managerDao.findAllPendingReimbursementStatusAndMgrId(mgrId);
@@ -87,12 +92,14 @@ public class ManagerServiceImpl implements ManagerService {
 					fetchedPendingEntity.getReimbursementStatus());
 			allPendingPojo.add(returnReimbursementPojo);
 		}
-		LOG.info("Exited the view pending reimbursment in the service layer");
+		LOG.info("Exited viewAllPendingReimbursements() in ManagerServiceImpl...");
 		return allPendingPojo;
 	}
 
 	@Override
+
 	public List<ReimbursementPojo> viewAllResolvedReimbursements(int mgrId) throws SystemException, NoResolvedRequestException{
+
 		List<ReimbursementPojo> allResolvedPojo = new ArrayList<>();
 		List<ReimbursementEntity> allResolvedEntity = managerDao.findAllResolvedReimbursementStatusAndMgrId(mgrId);
 		System.out.println(mgrId);
@@ -107,13 +114,13 @@ public class ManagerServiceImpl implements ManagerService {
 			allResolvedPojo.add(returnReimbursementPojo);
 		}
 
-		System.out.println(mgrId);
+		LOG.info("Exited viewAllResolvedReimbursements() in ManagerServiceImpl...");
 		return allResolvedPojo;
 	}
 
 	@Override
-	public List<ReimbursementPojo> viewIndividualReimbursement(int mgrId, int empId) throws SystemException{
-		
+	public List<ReimbursementPojo> viewIndividualReimbursement(int mgrId, int empId) throws SystemException {
+		LOG.info("Entered viewIndividualReimbursement() in ManagerServiceImpl...");
 		List<ReimbursementEntity> allIndividualEntity = managerDao.findAllByMgrIdAndEmpId(mgrId, empId);
 		List<ReimbursementPojo> allResolvedPojo = new ArrayList<>();
 		
@@ -124,7 +131,9 @@ public class ManagerServiceImpl implements ManagerService {
 					fetchedResolvedEntity.getReimbursementAmt(), fetchedResolvedEntity.getReimbursementStatus());
 			allResolvedPojo.add(returnReimbursementPojo);
 		}
-		
+
+		LOG.info("Exited viewIndividualReimbursement() in ManagerServiceImpl...");
+
 		return allResolvedPojo;
 	}
 	
