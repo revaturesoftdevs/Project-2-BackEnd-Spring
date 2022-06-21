@@ -29,6 +29,8 @@ import com.group5devs.project2.dao.EmployeeDao;
 import com.group5devs.project2.dao.ReimbursementDao;
 import com.group5devs.project2.entity.EmployeeEntity;
 import com.group5devs.project2.entity.ReimbursementEntity;
+import com.group5devs.project2.exceptions.NoPendingRequestException;
+import com.group5devs.project2.exceptions.NoResolvedRequestException;
 import com.group5devs.project2.pojo.EmployeePojo;
 import com.group5devs.project2.pojo.ReimbursementPojo;
 import com.group5devs.project2.service.EmployeeServiceImpl;
@@ -100,7 +102,7 @@ class Project2ApplicationTests {
     
     @DisplayName("JUnit test for viewPendingReimbursements method")
     @Test
-    public void testViewPendingReimbursements() {
+    public void testViewPendingReimbursements() throws NoPendingRequestException{
     	when(reimbursementDao.findByEmpId(1)).thenReturn(List.of(dummyReimbursementEntity, dummyReimbursementEntity));
     	
     	List<ReimbursementPojo> actualAllPendingReimbursementPojoList = service.viewPendingReimbursements(1);
@@ -110,9 +112,14 @@ class Project2ApplicationTests {
     }
     
     
+
 //    @DisplayName("JUnit test for viewResolvedReimbursements method")
 //    @Test
 //    public void testViewResolvedReimbursements() {
+//    @DisplayName("JUnit test for viewResolvedReimbursements method")
+//    @Test
+//    public void testViewResolvedReimbursements() throws NoResolvedRequestException{
+
     	
 //    	mockito.strictness(Strictness.LENIENT);
 //    	List<ReimbursementEntity> listReimbursementEntities = (List<ReimbursementEntity>) new ReimbursementEntity();

@@ -24,6 +24,7 @@
 2022-06-20 15:12:52,677 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 1.471 seconds (JVM running for 6852.698)
 2022-06-20 15:13:16,659 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-OJF9H6U with PID 8152 (C:\Users\anilc\git\Project-2-BackEnd-Spring\target\classes started by anilc in C:\Users\anilc\git\Project-2-BackEnd-Spring)
 2022-06-20 15:13:16,663 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+<<<<<<< HEAD
 2022-06-20 15:13:25,451 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 9.647 seconds (JVM running for 10.929)
 2022-06-20 15:25:48,933 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-OJF9H6U with PID 12312 (C:\Users\anilc\git\Project-2-BackEnd-Spring\target\classes started by anilc in C:\Users\anilc\git\Project-2-BackEnd-Spring)
 2022-06-20 15:25:48,934 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
@@ -52,3 +53,119 @@
 2022-06-20 17:56:26,569 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-OJF9H6U with PID 21620 (C:\Users\anilc\git\Project-2-BackEnd-Spring\target\classes started by anilc in C:\Users\anilc\git\Project-2-BackEnd-Spring)
 2022-06-20 17:56:26,571 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
 2022-06-20 17:56:31,427 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 5.348 seconds (JVM running for 5.944)
+=======
+2022-06-20 16:02:52,988 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16012 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:02:53,023 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:03:09,414 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 17.397 seconds (JVM running for 19.069)
+2022-06-20 16:09:18,292 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16012 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:09:18,293 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:09:21,414 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 3.265 seconds (JVM running for 391.069)
+2022-06-20 16:12:15,860 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16012 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:12:15,861 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:12:18,016 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 2.298 seconds (JVM running for 567.671)
+2022-06-20 16:12:22,681 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16012 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:12:22,683 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:12:24,349 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 1.724 seconds (JVM running for 574.004)
+2022-06-20 16:18:44,581 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16012 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:18:44,582 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:18:47,917 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 3.406 seconds (JVM running for 957.573)
+2022-06-20 16:27:18,399 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 15904 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:27:18,401 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:27:41,090 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 24.127 seconds (JVM running for 25.482)
+2022-06-20 16:28:58,345 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 15904 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:28:58,351 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:29:01,700 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 3.447 seconds (JVM running for 106.091)
+2022-06-20 16:30:17,835 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 15904 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:30:17,836 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:30:20,774 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 3.026 seconds (JVM running for 185.167)
+2022-06-20 16:31:03,373 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 15904 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:31:03,374 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:31:06,386 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 3.199 seconds (JVM running for 230.778)
+2022-06-20 16:33:13,588 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 7632 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:33:13,592 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:33:23,138 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 10.51 seconds (JVM running for 11.856)
+2022-06-20 16:36:41,793 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 7632 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:36:41,794 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:36:44,502 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 2.823 seconds (JVM running for 213.22)
+2022-06-20 16:41:29,821 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 7632 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:41:29,822 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:41:32,062 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 2.341 seconds (JVM running for 500.78)
+2022-06-20 16:41:55,018 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 7632 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:41:55,018 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:41:57,027 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 2.085 seconds (JVM running for 525.745)
+2022-06-20 16:46:30,671 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 7632 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:46:30,672 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:46:32,426 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 1.821 seconds (JVM running for 801.144)
+2022-06-20 16:47:29,124 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 7632 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 16:47:29,125 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 16:47:30,818 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 1.81 seconds (JVM running for 859.536)
+2022-06-20 17:04:43,649 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 956 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:04:43,652 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:04:52,087 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 9.248 seconds (JVM running for 10.281)
+2022-06-20 17:15:55,088 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 956 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:15:55,088 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:16:12,368 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 10848 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:16:12,371 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:16:27,127 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 16.547 seconds (JVM running for 18.655)
+2022-06-20 17:18:11,065 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 10848 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:18:11,066 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:18:16,371 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 5.444 seconds (JVM running for 127.898)
+2022-06-20 17:20:22,806 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 10848 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:20:22,807 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:20:36,313 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 15192 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:20:36,316 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:20:49,920 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 14.959 seconds (JVM running for 16.893)
+2022-06-20 17:24:46,675 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 15192 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:24:46,677 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:24:49,315 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 2.718 seconds (JVM running for 256.287)
+2022-06-20 17:26:29,096 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:26:29,099 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:26:38,256 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 10.062 seconds (JVM running for 11.275)
+2022-06-20 17:34:14,541 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:34:14,542 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:34:18,997 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 4.822 seconds (JVM running for 472.017)
+2022-06-20 17:34:45,183 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:34:45,184 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:34:48,373 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 3.389 seconds (JVM running for 501.392)
+2022-06-20 17:35:25,703 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:35:25,704 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:35:28,318 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 2.676 seconds (JVM running for 541.336)
+2022-06-20 17:36:53,526 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:36:53,527 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:36:56,475 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 3.116 seconds (JVM running for 629.494)
+2022-06-20 17:37:04,231 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:37:04,231 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:37:06,504 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 2.418 seconds (JVM running for 639.524)
+2022-06-20 17:37:25,421 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:37:25,421 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:37:36,193 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:37:36,193 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:37:37,909 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 1.761 seconds (JVM running for 670.929)
+2022-06-20 17:38:38,359 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-2] Entered View all pending reimbursements method in the service
+2022-06-20 17:38:38,377 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-2] Exited the view pending reimbursment in the service layer
+2022-06-20 17:38:44,822 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-3] Entered View all pending reimbursements method in the service
+2022-06-20 17:38:44,825 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-3] Exited the view pending reimbursment in the service layer
+2022-06-20 17:39:07,235 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-4] Entered View all pending reimbursements method in the service
+2022-06-20 17:51:25,262 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-2] Entered View all pending reimbursements method in the service
+2022-06-20 17:53:18,738 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-5] Entered View all pending reimbursements method in the service
+2022-06-20 17:54:42,103 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13560 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:54:42,104 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:54:44,324 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 2.31 seconds (JVM running for 1697.343)
+2022-06-20 17:58:37,929 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13932 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 17:58:37,932 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 17:58:47,659 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 10.989 seconds (JVM running for 13.305)
+2022-06-20 18:08:42,940 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-5] Entered View all pending reimbursements method in the service
+2022-06-20 18:09:17,996 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-7] Entered View all pending reimbursements method in the service
+2022-06-20 18:10:35,786 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-1] Entered View all pending reimbursements method in the service
+2022-06-20 19:36:31,135 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 13932 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 19:36:31,136 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 19:36:35,303 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 4.354 seconds (JVM running for 5880.976)
+2022-06-20 19:43:13,173 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16552 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 19:43:13,176 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-06-20 19:43:23,922 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Project2Application in 11.673 seconds (JVM running for 12.766)
+2022-06-20 19:56:50,042 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-5] Entered View all pending reimbursements method in the service
+2022-06-20 19:56:50,046 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-5] Exited the view pending reimbursment in the service layer
+2022-06-20 19:56:56,569 INFO com.group5devs.project2.service.ManagerServiceImpl [http-nio-7272-exec-7] Entered View all pending reimbursements method in the service
+2022-06-20 20:27:22,278 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Project2Application using Java 15.0.1 on DESKTOP-QJSPBFJ with PID 16552 (N:\myproject2\Project-2-BackEnd-Spring\target\classes started by 14167 in N:\myproject2\Project-2-BackEnd-Spring)
+2022-06-20 20:27:22,280 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+>>>>>>> 3ef6b0f9efd75229dda0bf8852516219c8bddf3b
