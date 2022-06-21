@@ -193,7 +193,11 @@ public class ManagerServiceImpl implements ManagerService {
 		message.setFrom("devarianil415@gmail.com");
 		message.setTo(employeePojo.getEmpLastName());
 		message.setSubject("Subject: Registration successfull");
-		message.setText("Body: you're registered with username: "+ employeePojo.getEmpUserName()+" and password: "+employeePojo.getEmpPassword());
+		message.setText("Welcome, "+employeePojo.getEmpFirstName()+"! We’re happy to have you on board and we can’t wait to help you reach new heights. Always ask questions when you have them and let us know how we can help you move forward. Around here, it’s all about the journey."
+				+ 
+				"  "
+				+ ""
+				+ "you're registered with username: "+ employeePojo.getEmpUserName()+" and password: "+employeePojo.getEmpPassword());
 		
 		javaMailSender.send(message);
 	
